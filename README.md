@@ -16,6 +16,6 @@ $ ./app
 
 ```
 $ CGO_ENABLED=0 GOOS=linux go build -o app
-$ docker build -t cloud-native-muc-sqsc-golang:1.0 .
-$ docker run -it -p 9090:9090 cloud-native-muc-sqsc-golang:1.0
+$ docker build -t cloud-native-muc-sqsc-golang:1.1 .
+$ docker run -it -p 9090:9090 cloud-native-muc-sqsc-golang:1.1
 ```

@@ -1,0 +1,26 @@
+version: '2'
+
+services: 
+  database:
+    image: "postgres:9.6.3"
+    mem_limit: 256m
+    environment:
+      - POSTGRES_USER=golang
+      - POSTGRES_PASSWORD=12qwasyx
+    ports:
+      - "5432:5432" 
+
+  service:
+    build: .
+    image: cloud-native-muc-sqsc-golang:1.1
+    environment: 
+      - DB_ENGINE=postgres
+      - DB_HOST=database
+      - DB_PORT=5432
+      - PROJECT_DB_USERNAME=golang
+      - PROJECT_DB_PASSWORD=12qwasyx
+      - PROJECT_DB_NAME=golang
+    ports: 
+      - "9090:9090"
+    depends_on:
+      - database

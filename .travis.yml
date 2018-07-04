@@ -3,4 +3,5 @@ go:
   - "1.10"
 script: 
   - go get github.com/gin-gonic/gin
+  - go get github.com/lib/pq
   - CGO_ENABLED=0 GOOS=linux go build -o app
