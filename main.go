@@ -60,7 +60,7 @@ func database() {
 func message() string {
 	msg := os.Getenv("MESSAGE")
 	if len(msg) == 0 {
-		msg = "Hello Cloud Native Night Muc with SquareScale!"
+		msg = "Hello Go Service Cloud Native Night with SquareScale!"
 	}
 	return msg
 }

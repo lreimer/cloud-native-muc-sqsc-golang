@@ -28,6 +28,19 @@ func AllBooks(db *sql.DB) []Book {
 
 // GetBook returns the book for a given ISBN
 func GetBook(db *sql.DB, isbn string) (Book, bool) {
+	/*
+		book := Book{}
+		err := db.QueryRow("SELECT title, author, isbn, description FROM books WHERE isbn=$1", isbn).Scan(&book.Title, &book.Author, &book.ISBN, &book.Description)
+
+		if err == sql.ErrNoRows {
+			return nil, false
+		}
+		if err != nil {
+			log.Print(err)
+			return nil, false
+		}
+	*/
+
 	book, found := books[isbn]
 	return book, found
 }
