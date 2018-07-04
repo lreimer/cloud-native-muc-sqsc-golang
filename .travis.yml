@@ -1,0 +1,6 @@
+language: go
+go:
+  - "1.10"
+script: 
+  - go get github.com/gin-gonic/gin
+  - CGO_ENABLED=0 GOOS=linux go build -o app
