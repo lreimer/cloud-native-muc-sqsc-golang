@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lreimer/cloud-native-muc-sqsc-golang.svg?branch=master)](https://travis-ci.org/lreimer/cloud-native-muc-sqsc-golang)
+
 # Enterprise Cloud Native for SME - Go Service
 
 Simple Go demo service for the Cloud Native Night with SquareScale.
